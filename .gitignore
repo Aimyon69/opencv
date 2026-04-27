@@ -2,3 +2,4 @@
 __pycache__/
 /python_api/videoCapture/cap.avi
 /python_api/MsPlusFd/cap.avi
+build
