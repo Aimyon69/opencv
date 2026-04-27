@@ -1,0 +1,24 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "linux-5090",
+      "displayName": "RTX 5090 开发环境",
+      "binaryDir": "${sourceDir}/build",
+      "toolchainFile": "${sourceDir}/linux_gcc.cmake",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "ENABLE_CUDA": "ON"
+      }
+    },
+    {
+      "name": "jetson-deploy",
+      "displayName": "Jetson 边缘端部署",
+      "binaryDir": "${sourceDir}/build_jetson",
+      "toolchainFile": "${sourceDir}/jetson_toolchain.cmake",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.28)
+project(env_test)
+find_package(OpenCV REQUIRED)
+add_executable(test test.cpp)
+target_include_directories(test PRIVATE ${OpenCV_INCLUDE_DIRS})
+target_link_libraries(test ${OpenCV_LIBS})
+set_target_properties(test PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/bin)
